@@ -5,6 +5,7 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/joho/godotenv"
 	. "github.com/smartystreets/goconvey/convey"
 )
 
@@ -13,6 +14,7 @@ var (
 )
 
 func prepareTest(t *testing.T) {
+	_ = godotenv.Load("../../../.env")
 	repository = IntiFilmRepository()
 }
 
